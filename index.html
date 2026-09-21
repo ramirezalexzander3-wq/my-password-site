@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Private Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 150px;
+            background: #111;
+            color: white;
+        }
+
+        input {
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #wrong {
+            color: #ff5555;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Private Website</h1>
+
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Enter</button>
+
+    <p id="wrong">Wrong password</p>
+
+    <script>
+        function login() {
+            const password = document.getElementById("password").value;
+
+            if (password === "YOURPASSWORD") {
+                window.location.href = "YOUR_GOOGLE_SITE_URL";
+            } else {
+                document.getElementById("wrong").style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
